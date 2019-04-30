@@ -1,0 +1,16 @@
+{
+    "name": "ewan/eway",
+    "description": "Exploring some of the functionality of eWay",
+    "type": "project",
+    "require": {
+        "eway/eway-rapid-php": "^1.3",
+        "vlucas/phpdotenv": "^3.3"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Ewan Thompson",
+            "email": "ewanpt@gmail.com"
+        }
+    ]
+}
