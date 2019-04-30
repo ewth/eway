@@ -2,3 +2,4 @@
 /.env
 # PHPStorm for life
 /.idea
+.env
