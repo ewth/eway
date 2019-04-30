@@ -12,5 +12,10 @@
             "name": "Ewan Thompson",
             "email": "ewanpt@gmail.com"
         }
-    ]
+    ],
+    "autoload": {
+        "psr-4": {
+            "Ewan\\Eway\\": "./src/"
+        }
+    }
 }
