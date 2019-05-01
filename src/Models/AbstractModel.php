@@ -21,4 +21,22 @@ abstract class AbstractModel
             }
         }
     }
+
+    /**
+     * @return array
+     */
+    public function toArray()
+    {
+        $result = [];
+        foreach (get_object_vars($this) as $key => $value) {
+            if (is_object($this->{$key})) {
+                if ($this->{$key} instanceof $this && method_exists($this->{$key}, 'toArray')) {
+                    $value = $this->{$key}->toArray();
+                }
+            }
+            $result[$key] = $value;
+        }
+
+        return $result;
+    }
 }
