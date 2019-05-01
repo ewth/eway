@@ -10,12 +10,14 @@ abstract class AbstractModel
      *
      * @param mixed $attributes
      */
-    public function __construct($attributes)
+    public function __construct($attributes = [])
     {
-        foreach ($attributes as $key => $value) {
-            $method = 'set' . $key;
-            if (method_exists($this, $method)) {
-                $this->{$method}($value);
+        if ($attributes) {
+            foreach ($attributes as $key => $value) {
+                $method = 'set' . $key;
+                if (method_exists($this, $method)) {
+                    $this->{$method}($value);
+                }
             }
         }
     }
