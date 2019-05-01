@@ -6,7 +6,9 @@ particularly well documented or accessible.
 Using their PHP SDK is great, but still there seemed to be some aspects missing.
 
 This repository is me toying around with the API and SDK more than a genuine attempt at producing any original
-functionality, but I figured it can go on Github in case somebody finds it useful.
+functionality, but I figured it can go on Github in case somebody finds it useful. Due to PCI compliance requirements,
+the credit card data (raw number and CVN) could never cross the server boundary, so encryption is done client side
+using eWay's client-side encryption.
 
-Note that this was being developed entirely for backend use. Hence I've just hacked together some simple AJAX via
- jQuery to leverage your browser to do the client-side stuff.
+Note that since was being developed for backend use and the interest here was more in the API usage than the client-side
+functionality, I've just hacked together a simple AJAX setup in `index.php` to interact with the class.
